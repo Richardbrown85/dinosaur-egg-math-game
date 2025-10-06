@@ -1,5 +1,4 @@
 /* Body styling - sets up full page layout and background */
-
 body {
     font-family: 'Arial', sans-serif;
     background-image: url(../images/background-image.webp);
@@ -10,8 +9,9 @@ body {
     padding: 20px;
 }
 
-/* Main white card that holds the game */
+/* Main Container */
 
+/* Main white card that holds the game */
 .container {
     background: white;
     border-radius: 20px;
@@ -21,4 +21,47 @@ body {
     width: 100%;
 }
 
+/* Game title styling */
+h1 {
+    text-align: center;
+    color: #667eea; /* Purple color matching theme */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+/* Game Area */
+
+/* Main game area - contains the question and answers */
+.game-area {
+    background: #f8f9fa; /* Light gray background */
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* Question container - displays the addition problem */
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between elements */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+/* Container for number displays (where cards appear) */
+.number-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    min-width: 100px;
+}
+
+/* Operator symbols (+, +, ?) */
+.operator {
+    font-size: 3em;
+    font-weight: bold;
+    color: #677eea; /* Purple color */
+}
 

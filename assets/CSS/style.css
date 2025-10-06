@@ -1,0 +1,24 @@
+/* Body styling - sets up full page layout and background */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../images/background-image.webp);
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px;
+}
+
+/* Main white card that holds the game */
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* Drop shadow for depth */
+    max-width: 600px;
+    width: 100%;
+}
+
+

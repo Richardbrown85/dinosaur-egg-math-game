@@ -2,7 +2,8 @@
 body {
     font-family: 'Arial', sans-serif;
     background-image: url(../images/background-image.webp);
-    min-height: 100vh; /* Full viewport height */
+    background-size: 100%;
+    min-height: 80vh; /* 80% viewport height */
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */

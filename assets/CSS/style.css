@@ -1,16 +1,29 @@
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+
+/* Reset all default browser margins, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Body styling - sets up full page layout and background */
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url(../images/background-image.webp);
-    background-size: 100%;
-    min-height: 80vh; /* 80% viewport height */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Purple gradient background */
+    min-height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     padding: 20px;
 }
 
-/* Main Container */
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
 
 /* Main white card that holds the game */
 .container {
@@ -25,14 +38,17 @@ body {
 /* Game title styling */
 h1 {
     text-align: center;
-    color: #667eea; /* Purple color matching theme */
+    color: #667eea; /* Purple color matching the theme */
     margin-bottom: 30px;
     font-size: 2.5em;
 }
 
-/* Score Board */
 
-/* Score board container - displays correct, wrong and level */
+/* ============================================
+   SCORE BOARD
+   ============================================ */
+
+/* Score board container - displays correct, wrong, and level */
 .score-board {
     display: flex;
     justify-content: space-around; /* Equal spacing between items */
@@ -75,7 +91,10 @@ h1 {
     color: #667eea;
 }
 
-/* Game Area */
+
+/* ============================================
+   GAME AREA
+   ============================================ */
 
 /* Main game area - contains the question and answers */
 .game-area {
@@ -104,14 +123,17 @@ h1 {
     min-width: 100px;
 }
 
-/* Operator symbols (+, +, ?) */
+/* Operator symbols (+, =, ?) */
 .operator {
     font-size: 3em;
     font-weight: bold;
-    color: #677eea; /* Purple color */
+    color: #667eea; /* Purple color */
 }
 
-/* Answer Section */
+
+/* ============================================
+   ANSWER SECTION
+   ============================================ */
 
 /* Container for answer choices */
 .answer-section {
@@ -132,7 +154,7 @@ h1 {
     background: white;
     border: 4px solid #667eea; /* Purple border */
     padding: 30px 50px;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     font-weight: bold;
     color: #667eea; /* Purple text */
     border-radius: 15px;
@@ -145,11 +167,183 @@ h1 {
 .choice-btn:hover {
     background: #667eea;
     color: white;
-    transform: scale(1.1); /* Slighty bigger */
+    transform: scale(1.1); /* Slightly bigger */
 }
 
-/* Active/click effect - button shrinks slighty when clicked */
+/* Active/click effect - button shrinks slightly when clicked */
 .choice-btn:active {
     transform: scale(0.95);
 }
 
+
+/* ============================================
+   FEEDBACK MODAL (Correct/Wrong Popup)
+   ============================================ */
+
+/* Modal overlay - covers entire screen with semi-transparent background */
+.feedback-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Appears above everything else */
+}
+
+/* Show modal when "show" class is added */
+.feedback-modal.show {
+    display: flex;
+}
+
+/* Feedback box - the white card that shows the message */
+.feedback-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: popIn 0.3s ease-out; /* Pop-in animation */
+}
+
+/* Pop-in animation for feedback box */
+@keyframes popIn {
+    from {
+        transform: scale(0.5); /* Start small */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: scale(1); /* End at normal size */
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Icon (emoji) in feedback box */
+.feedback-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+/* Feedback message text */
+.feedback-message {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* "Next Question" button */
+.next-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Hover effect for Next button */
+.next-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* ============================================
+   LEVEL UP MODAL (Special Celebration)
+   ============================================ */
+
+/* Level up modal overlay */
+.level-up-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for emphasis */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Appears above feedback modal */
+}
+
+/* Show level up modal when "show" class is added */
+.level-up-modal.show {
+    display: flex;
+}
+
+/* Level up box - gold themed celebration card */
+.level-up-box {
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%); /* Gold to blue gradient */
+    padding: 60px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: celebration 0.6s ease-out; /* Spinning celebration animation */
+    border: 5px solid gold;
+}
+
+/* Celebration animation - spins and grows */
+@keyframes celebration {
+    0% {
+        transform: scale(0) rotate(-180deg); /* Start small and rotated */
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg); /* Overshoot slightly */
+    }
+    100% {
+        transform: scale(1) rotate(0deg); /* End at normal size */
+        opacity: 1;
+    }
+}
+
+/* Trophy icon that bounces */
+.level-up-icon {
+    font-size: 6em;
+    margin-bottom: 20px;
+    animation: bounce 0.5s infinite alternate; /* Continuous bouncing */
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+    from {
+        transform: translateY(0); /* Start position */
+    }
+    to {
+        transform: translateY(-20px); /* Bounce up */
+    }
+}
+
+/* Level up message text */
+.level-up-message {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
+    white-space: pre-line; /* Allows line breaks in text */
+}
+
+/* Continue playing button */
+.continue-btn {
+    background: gold;
+    color: #19547b; /* Dark blue text */
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect for continue button */
+.continue-btn:hover {
+    transform: scale(1.1);
+    background: #ffd700; /* Brighter gold */
+}

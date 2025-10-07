@@ -135,7 +135,33 @@ function updateDifficultyDisplay() {
  * @returns {Array} - Array of 2 numbers (shuffled)
  */
 function generateMultipleChoiceOptions(correctAnswer) {
-    // TODO: implement this function
+    const options = new set();  // Use set to avoid duplicates
+    options.add(correctAnswer); // Add the correct answer
+
+    const settings = getDifficultySettings();
+
+    // Generate 1 wrong answer (for 2 total options)
+    while (options.size < 2) {
+        let wrongAnswer;
+
+        // Generate a wrong answer that's close to the correct answer
+        const offset = Math.random() < 0.5 ? -1 : 1;  // Randomly go higher or lower
+        const offsetAmount = Math.floor(Math.random() * 2) + 1;  // Offset by 1 or 2
+        wrongAnswer = correctAnswer + (offset * offsetAmount);
+
+        // Make sure it's within valid range and different from correct answer
+        if (wrongAnswer >= 2 && wrongAnswer <= settings.maxSum && wrongAnswer !== correctAnswer) {
+        }
+    }
+
+    // Convert Set to Array and shuffle
+    const optionsArray = Array.from(options);
+    for (let i = optionsArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [optionsArray[i], optionsArray[j]] = [optionsArray[j], optionsArray[i]];  // Swap elements
+    }
+
+    return optionsArray;
 }
 
 /**
@@ -143,7 +169,17 @@ function generateMultipleChoiceOptions(correctAnswer) {
  * @param {Array} options - Array of answer options
  */
 function createMultipleChoiceButtons(options) {
-    // TODO: implement this function
+    multiChoiceContainer.innerHTML = '';  // Clear any existing buttons
+
+    // Create a button for each option
+    options.forEach(option => {
+        const button = document.createElement('button');
+        button.className = 'choice-btn';
+        button.textContent = option;
+        // When clicked, check if this answer is correct
+        button.addEventListener('click', () => checkMultipleChoiceAnswer(option));
+        multiChoiceContainer.appendChild(button);
+    });
 }
 
 /* Answer Checking */

@@ -111,3 +111,45 @@ h1 {
     color: #677eea; /* Purple color */
 }
 
+/* Answer Section */
+
+/* Container for answer choices */
+.answer-section {
+    text-align: center;
+}
+
+/* Multiple choice buttons container - displays 2 answer choices */
+.multiple-choice {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+/* Individual answer choice button */
+.choice-btn {
+    background: white;
+    border: 4px solid #667eea; /* Purple border */
+    padding: 30px 50px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #667eea; /* Purple text */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s; /* Smooth animation */
+    min-width: 120px;
+}
+
+/* Hover effect - button turns purple when mouse hovers */
+.choice-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: scale(1.1); /* Slighty bigger */
+}
+
+/* Active/click effect - button shrinks slighty when clicked */
+.choice-btn:active {
+    transform: scale(0.95);
+}
+

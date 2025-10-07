@@ -200,7 +200,29 @@ function checkMultipleChoiceAnswer(selectedAnswer) {
  * Displays the cards and answer choices
  */
 function generateQuestion() {
-    // TODO: implement this function
+    const settings = getDifficultySettings();
+
+    // Generate first number (1 to max1)
+    currentNum1 = Math.floor(Math.random() * settings.max1) + 1;
+
+    // Generate second number (1 to max2, ensuring sum doesn't exceed maxSum)
+    const maxNum2 = Math.min(settings.max2, settings.maxSum - currentNum1);
+    currentNum2 = Math.floor(Math.random() * maxNum2) + 1;
+
+    // Calculate the correct answer
+    currentAnswer = currentNum1 + currentNum2;
+
+    // Clear previous question
+    num1Display.innerHTML = '';
+    num2Display.innerHTML = '';
+
+    // Display the cards for both numbers
+    num1Display.appendChild(createCardDisplay(currentNum1));
+    num2Display.appendChild(createCardDisplay(currentNum2));
+
+    // Generate and display answer choices (2 buttons)
+    const options = generateMultipleChoiceOptions(currentAnswer);
+    createMultipleChoiceButtons(options);
 }
 
 /* Feedback System */
@@ -219,3 +241,24 @@ function showFeedback(isCorrect) {
 function hideFeedback() {
     // TODO: implement this function
 }
+
+/* Event Listeners */
+
+// When "Next Question" button is clicked, hide feedback and show new question
+nextBtn.addEventListener('click', hideFeedback);
+
+// When "Continue Playing" button is clicked (in level up modal)
+continueBtn.addEventListener('click', hideLevelUpModal);
+
+// Allow clicking outside feedback modal to close it
+feedbackModal.addEventListener('click', (e) => {
+    if (e.target === feedbackModal) { // Only if clicked on the overlay, not the box
+        hideFeedback();
+    }
+});
+
+/* Game Initialization */
+
+// Initialize the game when the page loads
+updateDifficultyDisplay(); // Show initial level (1)
+generateQuestion();        // Generate first question

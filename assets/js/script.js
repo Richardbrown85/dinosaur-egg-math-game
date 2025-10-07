@@ -190,7 +190,24 @@ function createMultipleChoiceButtons(options) {
  * @param {number} selectedAnswer - The answer the player chose
  */
 function checkMultipleChoiceAnswer(selectedAnswer) {
-    // TODO: implement this function
+    if (selectedAnswer === currentAnswer) {
+        // CORRECT ANSWER
+        correctScore++;  // Increase correct score
+        correctScoreEl.textContent = correctScore;  // Update display
+
+        // check if player leveled up
+        const leveledUp = checkLevelUp();
+
+        // Only show normal feedback if not leveling up
+        if (!leveledUp) {
+            showFeedback(true);
+        }
+    } else {
+        // WRONG ANSWER
+        wrongScore++;   // Increase wrong score
+        wrongScoreEl.textContent = wrongScore;  // Update display
+        showFeedback(false);
+    }
 }
 
 /* Question Generation */

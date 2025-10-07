@@ -12,8 +12,9 @@
 /* Body styling - sets up full page layout and background */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Purple gradient background */
-    min-height: 100vh; /* Full viewport height */
+    background-image: url(../images/background-image.webp);
+    background-size: 100%;
+    min-height: 80vh; /* 80% viewport height */
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */

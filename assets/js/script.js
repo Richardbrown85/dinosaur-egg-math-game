@@ -47,9 +47,9 @@ const difficultyLevelEl = document.getElementById('difficultyLevel');   // Level
 const cardImages = [
     'assets/images/card1.webp',  // Index 0: 1 egg
     'assets/images/card2.webp',  // Index 1: 2 eggs
-    'assests/images/card3.webp',  // Index 2: 3 eggs
-    'assests/images/card4.webp',  // Index 3: 4 eggs
-    'assetsimages/card5.webp'   // Index 4: 5 eggs
+    'assets/images/card3.webp',  // Index 2: 3 eggs
+    'assets/images/card4.webp',  // Index 3: 4 eggs
+    'assets/images/card5.webp'   // Index 4: 5 eggs
 ];
 
 

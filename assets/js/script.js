@@ -32,6 +32,18 @@ const correctScoreEl = document.getElementById('correctScore');                 
 const wrongScoreEl = document.getElementById('wrongScore');                       // Wrong score display
 const difficultyLevelEl = document.getElementById('difficultyLevel');             // Level display
 
+/* Card Image Configuration */
+
+// Array of cards images - each card shows a specific number of eggs
+// card1.webp = 1 egg, card2.webp = 2 eggs, etc.
+const cardImages = [
+    'images/card1.webp',  // Index 0: 1 egg
+    'images/card2.webp',  // Index 1: 2 eggs
+    'images/card3.webp',  // Index 2: 3 eggs
+    'images/card4.webp',  // Index 3: 4 eggs
+    'images/card5.webp',  // Index 4: 5 eggs
+];
+
 /* Card display functions */
 
 /**

@@ -82,7 +82,18 @@ function createCardDisplay(num) {
  * @returns {object} - Settings object with max values for numbers
  */
 function getDifficultySettings() {
-    // TODO: implement this function
+    switch(difficultylevel) {
+        case 1:
+            // Level 1: Numbers 1-4, sums up to 5
+            return { max1: 4, max2: 4, maxSum: 5};
+        case 2:
+            // Level 2: Numbers 1-5, sums up to 10
+            return { max1: 5, max2: 5, maxsum: 10};
+        case 3:
+        default:
+            // Level 3: Numbers 1-9, sums up to 15
+            return { max1: 9, max2: 9, maxSum: 15};            
+    }
 }
 
 /**

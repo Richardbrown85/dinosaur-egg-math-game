@@ -30,6 +30,51 @@ h1 {
     font-size: 2.5em;
 }
 
+/* Score Board */
+
+/* Score board container - displays correct, wrong and level */
+.score-board {
+    display: flex;
+    justify-content: space-around; /* Equal spacing between items */
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa; /* Light gray background */
+    border-radius: 10px;
+}
+
+/* Individual score item (correct, wrong, or level) */
+.score-item {
+    text-align: center;
+}
+
+/* Label text (e.g., "Correct", "Wrong", "Level") */
+.score-label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Score value (the actual number) */
+.score-value {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Green color for correct answers */
+.correct {
+    color: #28a745;
+}
+
+/* Red color for wrong answers */
+.wrong {
+    color: #dc3545;
+}
+
+/* Purple color for level number */
+.level {
+    color: #667eea;
+}
+
 /* Game Area */
 
 /* Main game area - contains the question and answers */

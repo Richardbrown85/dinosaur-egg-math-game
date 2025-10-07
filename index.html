@@ -15,6 +15,27 @@
     <div class="container">
         <h1>Dinosaur Egg Math Game</h1>
 
+        <!-- Score board - displays player statistics -->
+         <div Class="score-board">
+            <!-- Correct answer counter -->
+             <div class="score-item">
+                <div class="score-label">Correct</div>
+                <div class="score-value correct" id="correctScore">0</div>
+             </div>
+
+            <!-- Wrong answers counter -->
+             <div class="score-item">
+                <div class="score-label">Wrong</div>
+                <div class="score-value wrong" id="wrongScore">0</div>
+             </div>
+             
+             <!-- Current difficulty level -->
+              <div class="score-item">
+                <div class="score-label">Level</div>
+                <div class="score-value level" id="difficultyLevel">0</div>
+              </div>
+        </div>
+
         <!-- Main game area - where questions are displayed -->
         <div class="game-area">
 

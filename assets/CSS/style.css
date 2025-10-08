@@ -19,7 +19,42 @@ body {
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-    padding: 20px;
+}
+
+/* ============================================
+   EXIT BUTTON
+   ============================================ */
+
+/* Exit button - positioned in top right corner */
+.exit-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    color: #667eea;
+    border: 3px solid #667eea;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    font-size: 1em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 3000; /* Appears above everything */
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.exit-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Active/click effect */
+.exit-btn:active {
+    transform: translateY(0px);
 }
 
 

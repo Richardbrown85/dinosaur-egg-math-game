@@ -14,7 +14,8 @@ body {
     font-family: 'Arial', sans-serif;
     background-image: url(../images/background-image.webp);
     background-size: 100%;
-    min-height: 80vh; /* 80% viewport height */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* 80% viewport height */
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
@@ -130,6 +131,30 @@ h1 {
     font-size: 3em;
     font-weight: bold;
     color: #667eea; /* Purple color */
+}
+
+/* ============================================
+   CARD IMAGES
+   ============================================ */
+
+/* Card container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card image styling */
+.card-image {
+    width: 180px;      /* Change this value to make bigger/smaller */
+    height: 225px;     /* Change this value to make bigger/smaller */
+    object-fit: contain; /* Keeps image proportions */
+    transition: transform 0.3s; /* Smooth animation */
+}
+
+/* Optional: Cards grow slightly on hover */
+.card-image:hover {
+    transform: scale(1.05); /* Makes cards 5% bigger on hover */
 }
 
 

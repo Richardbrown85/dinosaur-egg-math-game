@@ -63,22 +63,15 @@ const cardImages = [
  * @returns {HTMLElement} - Container with the card image
  */
 function createCardDisplay(num) {
-    // Create a container div for the card
     const container = document.createElement('div');
-    container.style.display = 'flex';
-    container.style.justifyContent = 'center';
-    container.style.alignItems = 'center';
+    container.className = 'card-container';  // Add class
     
-    // Create an image element for the card
     const card = document.createElement('img');
-    card.src = cardImages[num - 1];  // Get correct image (subtract 1 because arrays start at 0)
+    card.src = cardImages[num - 1];
     card.alt = `card with ${num} eggs`;
     card.className = 'card-image';
-    card.style.width = '120px';
-    card.style.height = '150px';
-    card.style.objectFit = 'contain';  // Keep image proportions
+    // Remove all inline styles
     
-    // Add the card to the container
     container.appendChild(card);
     
     return container;

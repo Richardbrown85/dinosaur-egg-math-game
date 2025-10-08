@@ -22,11 +22,11 @@ body {
 }
 
 /* ============================================
-   EXIT BUTTON
+   PLAY/EXIT BUTTON
    ============================================ */
 
 /* Exit button - positioned in top right corner */
-.exit-btn {
+.play-exit-btn {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -45,7 +45,7 @@ body {
 }
 
 /* Hover effect */
-.exit-btn:hover {
+.play-exit-btn:hover {
     background: #667eea;
     color: white;
     transform: translateY(-2px); /* Slight lift */
@@ -53,7 +53,7 @@ body {
 }
 
 /* Active/click effect */
-.exit-btn:active {
+.play-exit-btn:active {
     transform: translateY(0px);
 }
 

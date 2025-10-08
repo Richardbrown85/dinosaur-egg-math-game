@@ -379,3 +379,358 @@ h1 {
     transform: scale(1.1);
     background: #ffd700; /* Brighter gold */
 }
+
+/* ============================================
+   RESPONSIVE DESIGN - ALL SCREEN SIZES
+   ============================================ */
+
+/* Base styles are already mobile-first, these are enhancements */
+
+/* Extra Small Devices (Phones, less than 576px) */
+@media (max-width: 575px) {
+    /* Reduce padding on body */
+    body {
+        padding: 10px;
+    }
+    
+    /* Container adjustments */
+    .container {
+        padding: 10px;
+        border-radius: 15px;
+    }
+    
+    /* Smaller title */
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    
+    /* Score board - stack vertically on very small screens */
+    .score-board {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .score-item {
+        padding: 10px 0;
+    }
+    
+    .score-value {
+        font-size: 1.8em;
+    }
+    
+    /* Game area */
+    .game-area {
+        padding: 20px;
+    }
+    
+    /* Question layout - stack vertically */
+    .question {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* Smaller operators */
+    .operator {
+        font-size: 2em;
+    }
+    
+    /* Card images - smaller on tiny screens */
+    .card-image {
+        width: 100px;
+        height: 125px;
+    }
+    
+    /* Answer buttons - full width, stacked */
+    .multiple-choice {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .choice-btn {
+        width: 100%;
+        padding: 20px;
+        font-size: 2em;
+    }
+    
+    /* Feedback modal */
+    .feedback-box {
+        padding: 25px;
+        margin: 0 10px;
+    }
+    
+    .feedback-icon {
+        font-size: 3em;
+    }
+    
+    .feedback-message {
+        font-size: 1.2em;
+    }
+    
+    .next-btn {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+    
+    /* Level up modal */
+    .level-up-box {
+        padding: 30px;
+        margin: 0 10px;
+    }
+    
+    .level-up-icon {
+        font-size: 4em;
+    }
+    
+    .level-up-message {
+        font-size: 1.3em;
+    }
+    
+    .continue-btn {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+    
+    /* Exit button */
+    .exit-section {
+        margin-top: 15px;
+    }
+    
+    .exit-btn-bottom {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+    }
+}
+
+/* Small Devices (Landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .game-area {
+        padding: 10px;
+    }
+    
+    .card-image {
+        width: 140px;
+        height: 175px;
+    }
+    
+    .choice-btn {
+        padding: 25px 40px;
+        font-size: 2.2em;
+    }
+    
+    .operator {
+        font-size: 2.5em;
+    }
+}
+
+/* Medium Devices (Tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 700px;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2.3em;
+    }
+    
+    .game-area {
+        padding: 10px;
+    }
+    
+    .card-image {
+        width: 160px;
+        height: 200px;
+    }
+    
+    .choice-btn {
+        padding: 28px 45px;
+        font-size: 2.3em;
+        min-width: 140px;
+    }
+    
+    .operator {
+        font-size: 2.8em;
+    }
+    
+    /* Keep score board horizontal */
+    .score-board {
+        flex-direction: row;
+    }
+}
+
+/* Large Devices (Desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 750px;
+    }
+    
+    .card-image {
+        width: 180px;
+        height: 225px;
+    }
+    
+    .choice-btn {
+        padding: 30px 50px;
+        font-size: 2.5em;
+    }
+}
+
+/* Extra Large Devices (Large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 800px;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+    
+    .game-area {
+        padding: 10px;
+    }
+    
+    .card-image {
+        width: 200px;
+        height: 250px;
+    }
+    
+    .choice-btn {
+        padding: 35px 60px;
+        font-size: 2.8em;
+        min-width: 150px;
+    }
+    
+    .operator {
+        font-size: 3.5em;
+    }
+    
+    .score-value {
+        font-size: 2.5em;
+    }
+}
+
+/* Landscape Orientation - Special handling for phones in landscape */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 15px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    
+    .score-board {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .score-value {
+        font-size: 1.5em;
+    }
+    
+    .game-area {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .question {
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .card-image {
+        width: 80px;
+        height: 100px;
+    }
+    
+    .operator {
+        font-size: 2em;
+    }
+    
+    .choice-btn {
+        padding: 15px 30px;
+        font-size: 1.8em;
+    }
+    
+    .feedback-box,
+    .level-up-box {
+        padding: 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets for mobile */
+    .choice-btn {
+        min-height: 60px;
+        padding: 25px 40px;
+    }
+    
+    .next-btn,
+    .continue-btn {
+        min-height: 50px;
+        padding: 15px 35px;
+    }
+    
+    .exit-btn-bottom {
+        min-height: 50px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .choice-btn:hover {
+        transform: none;
+    }
+    
+    /* Add active state instead */
+    .choice-btn:active {
+        transform: scale(0.95);
+        background: #667eea;
+        color: white;
+    }
+}
+
+/* High DPI displays (Retina screens) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .card-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark mode support (if user has dark mode enabled) */
+@media (prefers-color-scheme: dark) {
+    /* Optional: You can add dark mode styles here if desired */
+    /* For now, keeping the game in light mode for consistency */
+}

@@ -73,14 +73,6 @@ body {
     width: 100%;
 }
 
-/* Game title styling */
-h1 {
-    text-align: center;
-    color: #667eea; /* Purple color matching the theme */
-    margin-bottom: 30px;
-    font-size: 2.5em;
-}
-
 
 /* ============================================
    SCORE BOARD
@@ -172,6 +164,7 @@ h1 {
     font-weight: bold;
     color: #667eea; /* Purple color */
 }
+
 
 /* ============================================
    CARD IMAGES
@@ -344,7 +337,7 @@ h1 {
 
 /* Level up box - gold themed celebration card */
 .level-up-box {
-    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%); /* Gold to blue gradient */
+    background: white;
     padding: 60px;
     border-radius: 20px;
     text-align: center;
@@ -389,7 +382,7 @@ h1 {
 .level-up-message {
     font-size: 2em;
     font-weight: bold;
-    color: white;
+    color: #667eea;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
     white-space: pre-line; /* Allows line breaks in text */
@@ -634,7 +627,7 @@ h1 {
     }
     
     .game-area {
-        padding: 10px;
+        padding: 20px;
     }
     
     .card-image {

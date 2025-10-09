@@ -2,98 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- IMPORTANT: This makes responsive design work -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Dinosaur Egg Math Game | Game page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur Egg Math Game | Landing page</title>
     <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
 <body>
-    <!-- Exit button - links to landing page -->
-    <a href="index-landing.html" class="play-exit-btn">Exit Game</a>
+    <h1>Dinosaur Egg Math</h1>
     
-    <!-- Main game container - holds all game elements -->
-    <div class="container">
-        
-       <!-- Score board - displays player statistics -->
-        <div class="score-board">
-            <!-- Correct answers counter -->
-            <div class="score-item">
-                <div class="score-label">Correct</div>
-                <div class="score-value correct" id="correctScore">0</div>
-            </div>
-            
-            <!-- Wrong answers counter -->
-            <div class="score-item">
-                <div class="score-label">Wrong</div>
-                <div class="score-value wrong" id="wrongScore">0</div>
-            </div>
-            
-            <!-- Current difficulty level -->
-            <div class="score-item">
-                <div class="score-label">Level</div>
-                <div class="score-value level" id="difficultyLevel">1</div>
-            </div>
-        </div>
+    <!-- Play button - links to game page -->
+    <a href="game.html" class="play-exit-btn">Play Game</a>
 
-        <!-- Main game area - where questions are displayed -->
-        <div class="game-area">
-            
-            <!-- Question display - shows the addition problem -->
-            <div class="question">
-                <!-- First number (shows card with eggs) -->
-                <div class="number-display" id="num1"></div>
-                
-                <!-- Plus operator -->
-                <div class="operator">+</div>
-                
-                <!-- Second number (shows card with eggs) -->
-                <div class="number-display" id="num2"></div>
-                
-                <!-- Equals sign -->
-                <div class="operator">=</div>
-                
-                <!-- Question mark (answer placeholder) -->
-                <div class="operator">?</div>
-            </div>
-
-            <!-- Answer section - where player chooses answer -->
-            <div class="answer-section">
-                <!-- Multiple choice buttons will be generated here by JavaScript -->
-                <div id="multipleChoiceContainer" class="multiple-choice"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Feedback Modal - shows "Correct!" or "Wrong!" after each answer -->
-    <div class="feedback-modal" id="feedbackModal">
-        <div class="feedback-box">
-            <!-- Icon (emoji) for feedback -->
-            <div class="feedback-icon" id="feedbackIcon"></div>
-            
-            <!-- Feedback message text -->
-            <div class="feedback-message" id="feedbackMessage"></div>
-            
-            <!-- Button to continue to next question -->
-            <button class="next-btn" id="nextBtn">Next Question</button>
-        </div>
-    </div>
-
-    <!-- Level Up Modal - special celebration when player levels up -->
-    <div class="level-up-modal" id="levelUpModal">
-        <div class="level-up-box">
-            <!-- Trophy icon for celebration -->
-            <div class="level-up-icon">🏆</div>
-            
-            <!-- Level up congratulations message -->
-            <div class="level-up-message" id="levelUpMessage">Level Up!</div>
-            
-            <!-- Button to continue playing -->
-            <button class="continue-btn" id="continueBtn">Continue Playing!</button>
-        </div>
-    </div>
-
-    <!-- Link to external JavaScript file - must be at the bottom so HTML loads first -->
-    <script src="assets/js/script.js"></script>
+    
 </body>
 </html>

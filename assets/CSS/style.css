@@ -1,13 +1,8 @@
-/* ============================================
-   RESET & BASE STYLES
-   ============================================ */
+/* Google fonts import */
 
-/* Reset all default browser margins, padding, and box-sizing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+
+
 
 /* Body styling - sets up full page layout and background */
 body {
@@ -19,6 +14,13 @@ body {
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
+}
+
+header {
+    font-family: 'Slackey';
+    font-size: 30px;
+    color: #667eea;
+    margin-bottom: 250px;
 }
 
 /* ============================================

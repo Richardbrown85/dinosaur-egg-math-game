@@ -369,9 +369,9 @@ header {
 /* Extra Small Devices (Phones, less than 576px) */
 @media (max-width: 575px) {
     body {
-        padding: 10px;
+        background-image: none;
+        background-color: #28a745;
     }
-    
     .container {
         padding: 10px;
         border-radius: 15px;
@@ -464,6 +464,10 @@ header {
 
 /* Small Devices (Landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767px) {
+    body {
+        background-size: 150%;
+    }
+    
     .container {
         padding: 30px;
     }
@@ -489,6 +493,8 @@ header {
 
 /* Medium Devices (Tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
+    
+    
     .container {
         max-width: 700px;
         padding: px;

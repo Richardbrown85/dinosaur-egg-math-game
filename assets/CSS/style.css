@@ -2,14 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
 
-
 /* Global styles */
 body {
-    font-family: 'Arial', sans-serif;
     background-image: url(../images/background-image.webp);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    min-height: 100vh; 
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+section {
+    font-family: 'Slackey';
+    font-size: 20px;
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -17,9 +19,29 @@ body {
 
 header {
     font-family: 'Slackey';
-    font-size: 30px;
+    font-size: 25px;
     color: #667eea;
     margin-bottom: 250px;
+}
+
+/* Buttons */
+
+.play-game {
+    border: 2px solid #667eea;
+    background-color: white;
+    color: #667eea;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 450px;
+}
+
+.play-game:hover {
+    border: 2px solid #667eea;
+    background-color: #667eea;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
 }
 
 /* Main container */
@@ -27,11 +49,11 @@ header {
 .container {
     background-color: rgba(255, 255, 255, 0.6); 
     border-radius: 20px;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 10px;
+    padding: 5px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); 
-    max-width: 800px;
-    width: 100%;
+    max-width: 750px;
+    width: 95%;
 }
 
 /* Score board */
@@ -395,7 +417,6 @@ header {
         padding: 12px 30px;
         font-size: 1em;
     }
-    
     
     .level-up-box {
         padding: 30px;

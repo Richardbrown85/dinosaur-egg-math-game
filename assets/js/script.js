@@ -10,17 +10,12 @@ let currentNum2 = 0;         // Second number in the addition problem
 let currentAnswer = 0;       // The correct answer to the current question
 let difficultyLevel = 1;     // Current difficulty level (1, 2, or 3)
 
-// ⭐ EASY TO CHANGE: Level up thresholds
-// Change these numbers to adjust when players level up
 const LEVEL_UP_THRESHOLDS = {
-    level2: 10,  // Player reaches level 2 after 10 correct answers
-    level3: 20   // Player reaches level 3 after 20 correct answers
+    level2: 15,  // Player reaches level 2 after 10 correct answers
 };
 
+/* DOM ELEMENT REFERENCES */
 
-/* ============================================
-   DOM ELEMENT REFERENCES
-   ============================================ */
 
 // Get references to HTML elements so we can update them
 const num1Display = document.getElementById('num1');                    // First number display area
@@ -97,10 +92,6 @@ function getDifficultySettings() {
         case 2:
             // Level 2: Numbers 1-5, sums up to 10
             return { max1: 5, max2: 5, maxSum: 10 };
-        case 3:
-        default:
-            // Level 3: Numbers 1-9, sums up to 15
-            return { max1: 9, max2: 9, maxSum: 15 };
     }
 }
 
@@ -116,12 +107,6 @@ function checkLevelUp() {
         showLevelUpModal();
         return true;
     } 
-    // Check if player has reached level 3 threshold
-    else if (correctScore === LEVEL_UP_THRESHOLDS.level3 && difficultyLevel === 2) {
-        difficultyLevel = 3;
-        showLevelUpModal();
-        return true;
-    }
     
     // Update the level display
     updateDifficultyDisplay();

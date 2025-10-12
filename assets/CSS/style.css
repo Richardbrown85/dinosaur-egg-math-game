@@ -44,8 +44,18 @@ header a {
     margin-bottom: 1em;
 }
 
-.active {
-    border-bottom: 1px solid #3a3a3a;
+h1 {
+    font-family: 'Slackey';
+    font-weight: 100;
+    color: #667eea;
+}
+
+li a {
+    font-family: 'Slackey';
+}
+
+li a:hover {
+    color: #667eea;
 }
 
 /* Navbar styles with dropdown toggle */
@@ -592,10 +602,6 @@ section {
     .container {
         max-width: 800px;
         padding: 10px;
-    }
-    
-    h1 {
-        font-size: 3em;
     }
     
     .game-area {

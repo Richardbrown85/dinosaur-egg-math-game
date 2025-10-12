@@ -50,12 +50,17 @@ h1 {
     color: #667eea;
 }
 
+h1:hover {
+    color: #764ba2;
+}
+
 li a {
     font-family: 'Slackey';
+    color: #667eea;
 }
 
 li a:hover {
-    color: #667eea;
+    color: #764ba2;
 }
 
 /* Navbar styles with dropdown toggle */

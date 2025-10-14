@@ -121,14 +121,6 @@ section {
     margin-bottom: 20px;
 }
 
-.play-section {
-    text-align: center;
-    font-family: 'Slackey';
-    font-size: 25px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}    
-
 .sub-header{
     margin-top: 200px;
     font-size: 50px;
@@ -138,17 +130,19 @@ section {
 /* Buttons */
 
 .play-game {
-    border: 2px solid #667eea;
-    background-color: white;
-    color: #667eea;
+    font-family: var(--primary-font);
+    font-size: 30px;
+    border: 2px solid var(--highlight-color);
+    background-color: var(--light-highlight-color);
+    color: var(--highlight-color);
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
 }    
 
 .play-game:hover {
-    border: 2px solid #667eea;
-    background-color: #667eea;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--secondary-color);
     color: white;
     padding: 10px;
     text-decoration: none;

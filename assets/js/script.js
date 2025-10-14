@@ -9,7 +9,7 @@ let currentAnswer = 0;       // The correct answer to the current question
 let difficultyLevel = 1;     // Current difficulty level (1, 2, or 3)
 
 const LEVEL_UP_THRESHOLDS = {
-    level2: 15,  // Player reaches level 2 after 10 correct answers
+    level2: 15,  // Player reaches level 2 after 15 correct answers
 };
 
 /* DOM ELEMENT REFERENCES */

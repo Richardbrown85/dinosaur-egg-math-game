@@ -1,6 +1,16 @@
 /* Google fonts import */
 
-@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-font: "Nunito Sans", sans-serif;
+    --secondary-font: "Saira", sans-serif;
+    --primary-color: #2D5016; /* deep forest green */
+    --secondary-color: #8B4513; /* saddle brown */
+    --highlight-color: #6B9E3D;/* vibrant leaf green */
+     --light-highlight-color: #F9F6F0; /* soft cream */
+}
 
 /* Asterisk wildcard selector to override default styles added by the browser */
 
@@ -8,6 +18,20 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --primary-font: "Montserrat", sans-serif;
+    --secondary-font: "Over the Rainbow", calligraphy;
+    --primary-color: #058095;
+    /* blue lagoon */
+    --secondary-color: #D8F0F0;
+    /* swans down */
+    --highlight-color: #26BFCC;
+    /* scooter */
+    --light-highlight-color: #8BD3D9;
+    /* morning glory */
 }
 
 /* Global styles */

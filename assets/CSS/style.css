@@ -122,9 +122,13 @@ section {
 }
 
 .sub-header{
-    margin-top: 200px;
-    font-size: 50px;
-    color: #667eea;
+    font-family: var(--primary-font);
+    margin-top: 170px;
+    font-size: 30px;
+    color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 /* Buttons */

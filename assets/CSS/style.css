@@ -375,13 +375,14 @@ footer {
 }
 
 .feedback-message {
+    font-family: var(--secondary-font);
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .next-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--secondary-color);
     color: white;
     border: none;
     padding: 15px 40px;

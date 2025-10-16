@@ -210,12 +210,12 @@ function showFeedback(isCorrect) {
     if (isCorrect) {
         
         feedbackIcon.textContent = '🎉';
-        feedbackMessage.textContent = 'Correct!';
-        feedbackMessage.style.color = '#28a745';  
+        feedbackMessage.textContent = 'Good Job!';
+        feedbackMessage.style.color = '#6B9E3D';  
     } else {
         
         feedbackIcon.textContent = '❌';
-        feedbackMessage.textContent = `Wrong! The answer was ${currentAnswer}`;
+        feedbackMessage.textContent = `Try again! ${currentAnswer}`;
         feedbackMessage.style.color = '#dc3545';  
     }
     

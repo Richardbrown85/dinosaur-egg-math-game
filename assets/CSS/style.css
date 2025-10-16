@@ -45,13 +45,7 @@ header a {
 }
 
 #menu {
-    font-size: 110%;
-    letter-spacing: 4px;
     list-style-type: none;
-}
-
-#menu>li {
-    margin-bottom: 1em;
 }
 
 h1 {
@@ -118,7 +112,7 @@ main {
 }
 
 footer {
-    font-family: var(--secondary-font);
+    font-family: var(--primary-font);
     color: var(--secondary-color);
     font-size: 30px;
     text-align: center;
@@ -578,6 +572,11 @@ footer {
         padding: 15px 30px;
         font-size: 1.2em;
     }
+
+    .footer {
+        font-size: 10px;
+    }
+
 }
 
 /* Large Devices (Desktops, 992px and up) */

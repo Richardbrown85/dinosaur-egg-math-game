@@ -222,8 +222,6 @@ function showFeedback(isCorrect) {
     feedbackModal.classList.add('show');  
 }
 
-
- 
 function hideFeedback() {
     feedbackModal.classList.remove('show');  
     generateQuestion();  

@@ -485,6 +485,12 @@ footer {
 
 /* Extra Small Devices (Phones, less than 576px) */
 @media (max-width: 575px) {
+    .welcome-box {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 5%;
+        padding: 10px;
+    }    
+    
     .container {
         padding: 10px;
         border-radius: 15px;
@@ -580,8 +586,24 @@ footer {
 
 }
 
+/* Medium devices (tablets, 768px and up */
+@media screen and (min-width: 768px) {
+    .welcome-box {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10%;
+        padding: 5%;
+    }    
+}
+
+
 /* Large Devices (Desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px) {
+    .welcome-box {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10%;
+        padding: 5%;
+    }    
+    
     nav {
         display: block;
         position: relative;

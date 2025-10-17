@@ -107,7 +107,7 @@ section {
 
 main {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center; 
 }
 
@@ -117,28 +117,35 @@ footer {
     font-size: 30px;
     text-align: center;
     background-color: var(--highlight-color);
-    margin-top: 250px;
-    padding: 20px
+    margin-top: 350px;
+    padding: 20px;
 }
 
 .exit-section {
     text-align: center;
-    font-family: 'Slackey';
     font-size: 25px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
 .main-content {
+    display: flex-column;
     font-family: var(--primary-font);
     margin-top: 100px;
     font-size: 35px;
     color: var(--secondary-color);
     padding: 20px;
-    border-radius: 10px;
     text-align: center;
     font-weight: 800;
 }
+
+.welcome-box {
+    background-color: rgba(255, 255, 255, 0.6);
+    max-width: 700px;
+    border-radius: 5%;
+    padding: 20px;
+    
+}    
 
 /* Buttons */
 
@@ -485,12 +492,6 @@ footer {
 
 /* Extra Small Devices (Phones, less than 576px) */
 @media (max-width: 575px) {
-    .welcome-box {
-        background-color: rgba(255, 255, 255, 0.6);
-        border-radius: 5%;
-        padding: 10px;
-    }    
-    
     .container {
         padding: 10px;
         border-radius: 15px;
@@ -580,7 +581,7 @@ footer {
         font-size: 1.2em;
     }
 
-    .footer {
+    footer {
         font-size: 18px;
     }
 
@@ -588,10 +589,8 @@ footer {
 
 /* Medium devices (tablets, 768px and up */
 @media screen and (min-width: 768px) {
-    .welcome-box {
-        background-color: rgba(255, 255, 255, 0.6);
-        border-radius: 10%;
-        padding: 5%;
+    footer {
+        font-size: 20px;
     }    
 }
 
@@ -638,11 +637,9 @@ footer {
         padding: 30px 50px;
         font-size: 2.5em;
     }
+    
 
-    .footer {
-        font-size: 10px;
-    }
-}
+}    
 
 /* Extra Large Devices (Large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -698,6 +695,12 @@ footer {
     .score-value {
         font-size: 2.5em;
     }
+}
 
+/* XL devices (large laptops, 1200 px and up) */
+@media screen and (min-width: 2560px) {
+    footer {
+        margin-top: 500px;
+    }
 }
 

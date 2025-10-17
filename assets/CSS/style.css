@@ -141,11 +141,10 @@ footer {
 
 .welcome-box {
     background-color: rgba(255, 255, 255, 0.6);
-    max-width: 700px;
+    padding: 40px;
     border-radius: 5%;
-    padding: 20px;
-    
-}    
+}
+  
 
 /* Buttons */
 
@@ -585,24 +584,31 @@ footer {
         font-size: 18px;
     }
 
+    .welcome-box {
+       background-color: rgba(255, 255, 255, 0.6);
+       border-radius: 5%;
+}    
+
+}
+
+/* Small Devices (Landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .welcome-box {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 20%;
+    }
 }
 
 /* Medium devices (tablets, 768px and up */
 @media screen and (min-width: 768px) {
     footer {
-        font-size: 20px;
-    }    
+        font-size: 30px;
+    }
 }
 
 
 /* Large Devices (Desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px) {
-    .welcome-box {
-        background-color: rgba(255, 255, 255, 0.6);
-        border-radius: 10%;
-        padding: 5%;
-    }    
-    
     nav {
         display: block;
         position: relative;
@@ -637,8 +643,6 @@ footer {
         padding: 30px 50px;
         font-size: 2.5em;
     }
-    
-
 }    
 
 /* Extra Large Devices (Large desktops, 1200px and up) */
@@ -697,10 +701,70 @@ footer {
     }
 }
 
+/* Landscape Orientation - Special handling for phones in landscape */
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        padding: 15px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    
+    .score-board {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .score-value {
+        font-size: 1.5em;
+    }
+    
+    .game-area {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .question {
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .card-image {
+        width: 80px;
+        height: 100px;
+    }
+    
+    .operator {
+        font-size: 2em;
+    }
+    
+    .choice-btn {
+        padding: 15px 30px;
+        font-size: 1.8em;
+    }
+    
+    .feedback-box,
+    .level-up-box {
+        padding: 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    .welcome-box {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10%;
+        padding: 15%;
+    }
+}
+
 /* XL devices (large laptops, 1200 px and up) */
 @media screen and (min-width: 2560px) {
     footer {
         margin-top: 500px;
     }
+    
 }
-

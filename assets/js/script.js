@@ -209,7 +209,7 @@ function generateQuestion() {
 function showFeedback(isCorrect) {
     if (isCorrect) {
         
-        feedbackIcon.textContent = '🎉';
+        feedbackIcon.textContent = '👍';
         feedbackMessage.textContent = 'Good Job!';
         feedbackMessage.style.color = '#6B9E3D';  
     } else {

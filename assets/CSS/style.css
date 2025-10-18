@@ -40,8 +40,16 @@ body {
     font-weight: 600;
 }
 
+.navbar-brand:hover {
+    color: var(--light-highlight-color);
+}
+
 .nav-link {
     color: var(--secondary-color)
+}
+
+.nav-link:hover {
+    color: var(--light-highlight-color);
 }
 
 section {
